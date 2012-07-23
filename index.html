@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Pods-CMS for Jaden and the Gang : Pods CMS - Challenge" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Pods-CMS for Jaden and the Gang</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/jadenperdue/Pods-CMS---Image-display">View on GitHub</a>
+
+          <h1 id="project_title">Pods-CMS for Jaden and the Gang</h1>
+          <h2 id="project_tagline">Pods CMS - Challenge</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/jadenperdue/Pods-CMS---Image-display/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/jadenperdue/Pods-CMS---Image-display/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>A List of Code That We Can't Get To Work</h1>
+
+<p>PODS Framework is an awesome software and we can see the potential of using it to maintain our site but we are amateurs learning as we go. If anyone out there knows the answer to any of our postings please help us. </p>
+
+<p><strong>1. This is the code that we are working on for our images:</strong>
+<code>&lt;P&gt;&lt;img src="&lt;?php echo $speaker_photo = wp_get_attachment_image_src( current( (array) $this-&gt;get_field( 'speaker_photo.ID' ) ), 'thumbnail' ); ?&gt;" width="230" height="353" border="0" /&gt;&lt;/P&gt;</code></p>
+
+<p>We need the image to display in a specific area in a specific size. We are using code and magic tags. But we can't get it to work. We imputed this code in our Pods Template.</p>
+
+<hr><ol>
+<li>
+<strong>We are trying to get this Pods helper to work.</strong> It is suppose to allow the user to make a selection and then display the selection in the output. But it only displays the number not the actual text. The text is what we need to be displayed. <strong>The code is below:</strong>
+</li>
+</ol><p>`&lt;?php
+$picktype = "checkbox"; // multiple selection, set to "radio" if you want radio buttons, checkbox for a checkbox list
+$yourvalues_arr = array( // Input your own values for inclusion in a checkbox or radiobutton list
+        0 =&gt; "Just Starting 0-9 Events", 
+        1 =&gt; "Some Experience 10-25 Events", 
+                2 =&gt; "Experienced 26+ Events", 
+                3 =&gt; "Full Time- Over 30 Events per Year" 
+                );
+// DO NOT EDIT BEYOND THIS POINT ( or you should know what you're doing ) - tomhermans.com</p>
+
+<p>$css<em>classes = str_replace(array(' ' . $coltype . ' ', ' pods_coltype</em>' . $coltype . ' '), array(' pick ', ' pods_coltype_pick '), $css_classes);
+?&gt;</p>
+
+ 
+<?php if(!empty($yourvalues_arr)) {
+    $value_arr = explode(",", $value); // retrieve set value and explode to array of set values
+    foreach($yourvalues_arr as $key => $val) {
+        $selected = '';
+        $active = '';
+        if (in_array($key, $value_arr)) {
+            $selected = ' CHECKED';
+            $active = ' active';
+        }
+        $val = array('id' =&gt; $key, 'name' =&gt; $val);
+?&gt;
+         /&gt;
+        <?php echo $val['name']; ?><br><?php }
+}
+?> 
+
+<p>
+jQuery(&amp;#39;#&amp;lt;?php echo $css_id; ?&amp;gt; input.checkbox-radio-option&amp;#39;).on(&amp;#39;change&amp;#39;, function(){
+    jQuery(&amp;#39;#&amp;lt;?php echo $css_id; ?&amp;gt; input.checkbox-radio-option&amp;#39;).removeClass(&amp;#39;active&amp;#39;);
+    jQuery(&amp;#39;#&amp;lt;?php echo $css_id; ?&amp;gt; input.checkbox-radio-option:checked&amp;#39;).addClass(&amp;#39;active&amp;#39;);
+});
+`</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Pods-CMS for Jaden and the Gang maintained by <a href="https://github.com/jadenperdue">jadenperdue</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
